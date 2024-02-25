@@ -9,6 +9,11 @@
 .
 +-- build                           '	Executable version of the project.
 +-- docs						    '	Project, documents.
++-- .devcontainer                   '	Project, development configuration.
++-- .docker                         '	Project, docker file.
+|   +-- .env                        '	each env. the file holds or separates the development environment definitions.
+|   +-- docker-compose.yaml         '	each .yml file holds or separates runtime definitions.
+|   +-- Dockerfile                  '	each docker file prepares the runtime launcher image.
 +-- reports                         '	Project, coverage, test, screen.
 |   +-- coverage                    '	Project, coverage web content
 |   |   ?-- index.html              '	Project, coverage report static file
@@ -30,128 +35,5 @@
 |   +-- unit					    '	Unit test.
 |   +-- integration                 '	Integration testing.
 +-- .editor.config                  '	Developers will use these code indents and styles in their IDEs.
-+-- .env                            '	each env. the file holds or separates the development environment definitions.
-+-- docker-compose.yml              '	each .yml file holds or separates runtime definitions.
-+-- dockerfile                      '	each docker file prepares the runtime launcher image.
 
-```
-
-# Project development architecture
-
-```
-tests:?
-testsResult:?
-coverage:?
-document:?
-pretier:?
-linter:?
-stage:?
-version:?
-environment:?
-```
-
-## Environment
-
-```
-.env
-.env.production
-.env.development
-.env.test
-```
-
-## Project Install
-
-Install detail
-
-```shell
-$ install
-▀ ╢█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟
-$ $CMD_INSTALL
-```
-
-### Test / Development / Production
-
-Start Linter
-
-```shell
-▀ ╢█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟
-$ $CMD_LINTER
-```
-
-Start Prettier
-
-```shell
-▀ ╢█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟
-$ $CMD_PRETTIER
-```
-
-Start Test and Generate test report
-
-xml [ ./reports/tests/junit.xml ]
-
-```shell
-▀ ╢█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟
-$ $CMD_TEST
-```
-
-Start Coverage and Generate coverage report
-
-html [ ./reports/coverage ]
-
-xml [ ./reports/test/cobertura-coverage.xml ]
-
-```shell
-▀ ╢█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟
-$ $CMD_COVERAGE
-```
-
-Generate Document
-
-html [ ./reports/document ]
-
-```shell
-▀ ╢█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟
-$ $CMD_DOCUMENT
-```
-
-Build
-
-binary [ ./build ]
-
-```shell
-▀ ╢█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟
-$ $CMD_BUILD
-```
-
-Start
-
-```shell
-▀ ╢█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟
-$ $CMD_START
-```
-
-## Docker Install
-
-```
-development : dockerfile.development
-production  : dockerfile.production
-test        : dockerfile.test
-```
-
-### Docker Development
-
-```docker
-docker-compose -f "docker-compose-development.yml" up -d --build
-```
-
-### Docker Production
-
-```docker
-docker-compose -f "docker-compose-production.yml" up -d --build
-```
-
-### Docker Test
-
-```docker
-docker-compose -f "docker-compose-test.yml" up -d --build
 ```
