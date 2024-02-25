@@ -1,2 +1,4 @@
+# These files and directories will be ignored by Docker.
+
 build
 dist
