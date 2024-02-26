@@ -89,7 +89,7 @@ EXPOSE $TCP_PORT
 # Development stage
 FROM build AS development
 
-# Install base packages
+# Install development packages
 RUN apk update && \
     apk add --no-cache \
     build-base \
@@ -109,10 +109,10 @@ COPY . .
 # Test stage
 FROM development AS test
 
-# Copy only necessary files for development
+# Copy only necessary files for test
 # In the previous stage, we had copied everything.
 
-# install development dependencies
+# install test dependencies
 
 
 
