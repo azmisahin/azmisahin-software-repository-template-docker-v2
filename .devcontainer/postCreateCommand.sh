@@ -25,4 +25,14 @@ echo SWICH_TRACKING_ERROR=$SWICH_TRACKING_ERROR
 echo SWICH_TRACKING_VERBOSE=$SWICH_TRACKING_VERBOSE
 echo SWICH_TRACKING_REPORT=$SWICH_TRACKING_REPORT
 
+# Virtual environment
+
+# Automatically formatting
+
+# Linting
+
+# Documentation generation
+
+# Test
+
 # /bin/sh
